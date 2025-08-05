@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     url: 'http://127.0.0.1:1337',
     prefix: '/api',
     version: 'v4',
-    token: process.env.STRAPI_JWT || ''
+    token: process.env.STRAPI_JWT || '0cd0e40004e6754b99c87190736e1c94094ae5383fab2896f0cceb79f63df1ce3d788d04f45057fd06830bb22a8d91e9af9d6d79ae28694a94df84dcc4c93b490b3a6c72b795195702e380ec0ca9280ba9ca958cf5ef190d548eba87982c9459453c00d92948c94122606f9f4cee9964bef15f2d406e2e7de45bfac23fc4aa22'
   },
   socketIO: {
     uri: 'http://127.0.0.1:5001'
@@ -26,9 +26,9 @@ export default defineNuxtConfig({
     classSuffix: '-mode',
     storageKey: 'nuxt-color-mode'
   },
-  css: ['~/assets/css/main.css', '~/assets/css/tailwind.css'],
+  css: ['~/assets/css/tailwind.css'],
   build: {
-    transpile: ['gsap', '@fortawesome/vue-fontawesome']
+    transpile: ['gsap', '@fortawesome/vue-fontawesome', 'socket.io-client']
   },
   runtimeConfig: {
     public: {
@@ -46,12 +46,12 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' },
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css' },
-        { rel: 'stylesheet', href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' }
+        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css', integrity: 'sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==' },
+        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css', integrity: 'sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM' },
+        { rel: 'stylesheet', href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css', integrity: 'sha512-7L5bV8v7bzlE2KPay0y6/PIwO8vOymBQt/0TFH+3iS3O5Omi+2LKVu7qF5yJCeVZZh4f3zqUr+ZwzNKaA3tQ1Rw==' }
       ],
       script: [
-        { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js', body: true, defer: true }
+        { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js', body: true, defer: true, integrity: 'sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz' }
       ]
     }
   },
@@ -76,6 +76,7 @@ export default defineNuxtConfig({
           }
         }
       }
-    }
+    },
+    logLevel: 'info'
   }
 });

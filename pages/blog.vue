@@ -12,7 +12,7 @@
             <div class="col-lg-6 col-md-6">
               <div class="single-blog-post p-6 rounded-md shadow-lg transition-transform duration-600">
                 <div class="blog-image">
-                  <img src="~/assets/img/blog-image/1.jpg" alt="Control4 Tips" loading="lazy" class="rounded-t-md w-full">
+                  <img src="/blog-image/1.jpg" alt="Control4 Tips" loading="lazy" class="rounded-t-md w-full">
                 </div>
                 <div class="blog-content p-5">
                   <h3 class="text-xl font-bold mb-2">Top 5 Control4 Troubleshooting Tips</h3>
@@ -23,7 +23,7 @@
             <div class="col-lg-6 col-md-6">
               <div class="single-blog-post p-6 rounded-md shadow-lg transition-transform duration-600">
                 <div class="blog-image">
-                  <img src="~/assets/img/blog-image/2.jpg" alt="Lutron AI" loading="lazy" class="rounded-t-md w-full">
+                  <img src="/blog-image/2.jpg" alt="Lutron AI" loading="lazy" class="rounded-t-md w-full">
                 </div>
                 <div class="blog-content p-5">
                   <h3 class="text-xl font-bold mb-2">Mastering Lutron Systems with AI</h3>
@@ -34,7 +34,7 @@
             <div class="col-lg-6 col-md-6">
               <div class="single-blog-post p-6 rounded-md shadow-lg transition-transform duration-600">
                 <div class="blog-image">
-                  <img src="~/assets/img/blog-image/3.jpg" alt="AI Future" loading="lazy" class="rounded-t-md w-full">
+                  <img src="/blog-image/3.jpg" alt="AI Future" loading="lazy" class="rounded-t-md w-full">
                 </div>
                 <div class="blog-content p-5">
                   <h3 class="text-xl font-bold mb-2">The Future of AI in Smart Homes</h3>

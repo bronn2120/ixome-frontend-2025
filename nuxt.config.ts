@@ -55,7 +55,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  ssr: false,
+  ssr: true, // Enable SSR for better initial render
   errorHandler: '~/error.vue',
   vite: {
     server: {

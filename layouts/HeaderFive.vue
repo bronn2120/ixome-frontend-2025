@@ -18,7 +18,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto space-x-4">
-            <li class="nav-item"><NuxtLink class="nav-link" to="/">Home</NuxtLink></li>
+            <li class="nav-item"><NuxtLink class="nav-link" to="/" exact>Home</NuxtLink></li>
             <li class="nav-item"><NuxtLink class="nav-link" to="/about">About</NuxtLink></li>
             <li class="nav-item"><NuxtLink class="nav-link" to="/services">Services</NuxtLink></li>
             <li class="nav-item"><NuxtLink class="nav-link" to="/pricing">Pricing</NuxtLink></li>
@@ -40,10 +40,21 @@ import { onMounted } from 'vue';
 
 onMounted(() => {
   console.log('HeaderFive.vue mounted');
-  if (typeof window !== 'undefined' && window.bootstrap) {
-    console.log('Bootstrap JS loaded');
-  } else {
-    console.error('Bootstrap JS not loaded');
+  if (typeof window !== 'undefined') {
+    const bootstrap = window.bootstrap;
+    if (bootstrap) {
+      console.log('Bootstrap JS loaded');
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('#navbarNav');
+      if (navbarToggler && navbarCollapse) {
+        console.log('Navbar elements found, initializing Bootstrap collapse');
+        new bootstrap.Collapse(navbarCollapse, { toggle: false });
+      } else {
+        console.error('Navbar toggler or collapse not found');
+      }
+    } else {
+      console.error('Bootstrap JS not loaded');
+    }
   }
 });
 </script>
@@ -56,6 +67,7 @@ onMounted(() => {
   width: 100%;
   z-index: 1000;
   background-color: #343a40;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-nav .nav-link {
@@ -63,6 +75,7 @@ onMounted(() => {
   font-size: 1rem;
   color: #ffffff !important;
   transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
 }
 
 .navbar-nav .nav-link:hover,

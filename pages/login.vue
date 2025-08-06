@@ -18,8 +18,7 @@
               <button type="submit" class="btn btn-primary w-full">Login</button>
               <p v-if="error" class="error mt-2 text-red-500 text-sm">{{ error }}</p>
             </form>
-            <!-- <p class="mt-4 text-gray-600">Don't have an account? <NuxtLink to="/signup" class="text-blue-500 hover:text-green-500">Sign Up</NuxtLink></p> -->
-            <!-- Signup page not yet implemented; uncomment when /signup is created -->
+            <p class="mt-4 text-gray-600">Don't have an account? <NuxtLink to="/signup" class="text-blue-500 hover:text-green-500">Sign Up</NuxtLink></p>
           </div>
         </div>
       </div>
@@ -52,7 +51,8 @@ const handleLogin = async () => {
     const data = await response.json();
     if (data.access_token) {
       localStorage.setItem('token', data.access_token);
-      router.push('/'); // Redirect to home until /dashboard is confirmed
+      localStorage.setItem('user_id', data.user_id);
+      router.push('/');
       error.value = '';
     } else {
       error.value = data.msg || 'Login failed. Try again.';

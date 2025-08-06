@@ -1,5 +1,5 @@
-/// <reference types="@nuxtjs/strapi" />
 /// <reference types="@nuxtjs/tailwindcss" />
+/// <reference types="@nuxtjs/strapi" />
 /// <reference types="@nuxtjs/color-mode" />
 /// <reference types="nuxt-socket-io" />
 /// <reference types="@nuxt/telemetry" />

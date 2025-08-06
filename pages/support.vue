@@ -25,14 +25,13 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import io from 'socket.io-client';
+import { io } from 'socket.io-client';
 
 const currentUserId = ref(localStorage.getItem('user_id') || 'guest');
 const messages = ref([]);
 const newMessage = ref('');
 const errorMessage = ref('');
 const loading = ref(true);
-const firstVisit = ref(!localStorage.getItem('first_visit_done'));
 const socket = ref(null);
 
 onMounted(() => {
@@ -57,9 +56,6 @@ onMounted(() => {
         text: 'Hey there! I’m your IXome.ai chatbot—ready to help with a smile! 😄',
         timestamp: new Date().getTime(),
       });
-      if (firstVisit.value) {
-        localStorage.setItem('first_visit_done', 'true');
-      }
     });
 
     socket.value.on('response', (data) => {
@@ -72,7 +68,7 @@ onMounted(() => {
     });
 
     socket.value.on('connect_error', (error) => {
-      errorMessage.value = `Connection issue: ${error.message}. Please try again.`;
+      errorMessage.value = `Connection issue: ${error.message}. Please try logging in again.`;
       console.error('Socket.IO connection error:', error);
       loading.value = false;
     });

@@ -25,7 +25,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import { io } from 'socket.io-client';
+import { io } from 'socket.io-client/dist/socket.io.esm.min.js'; // Use ESM version
 
 const currentUserId = ref(localStorage.getItem('user_id') || 'guest');
 const messages = ref([]);

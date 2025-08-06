@@ -68,6 +68,7 @@ const login = async () => {
     if (data.access_token) {
       token.value = data.access_token;
       localStorage.setItem('token', data.access_token);
+      localStorage.setItem('user_id', data.user_id);
       response.value = 'Login successful! You can now use the chat.';
     } else {
       response.value = data.msg || 'Login failed';
@@ -96,7 +97,7 @@ const sendQuery = async () => {
       })
     });
     const data = await res.json();
-    response.value = data.result || data.msg || 'Error: No response';
+    response.value = data.result || data.error || 'Error: No response';
   } catch (e) {
     response.value = 'Error: Failed to send query';
   }

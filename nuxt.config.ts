@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/tailwind.css'],
   build: {
-    transpile: ['gsap', '@fortawesome/vue-fontawesome', 'socket.io-client/dist/socket.io.esm.min.js']
+    transpile: ['gsap', '@fortawesome/vue-fontawesome', 'socket.io-client']
   },
   runtimeConfig: {
     public: {
@@ -77,9 +77,6 @@ export default defineNuxtConfig({
         }
       }
     },
-    logLevel: 'info',
-    optimizeDeps: {
-      include: ['socket.io-client/dist/socket.io.esm.min.js']
-    }
+    logLevel: 'info'
   }
 });

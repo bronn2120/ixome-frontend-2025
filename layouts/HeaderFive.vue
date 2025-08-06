@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container mx-auto px-4">
         <NuxtLink class="navbar-brand" to="/">
-          <img src="~/assets/img/logo.png" alt="IXome.ai Logo" class="h-12" loading="lazy" />
+          <img src="/logo.png" alt="IXome.ai Logo" class="h-12" loading="lazy" />
         </NuxtLink>
         <button
           class="navbar-toggler"

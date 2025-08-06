@@ -17,5 +17,5 @@ onMounted(() => {
 </script>
 
 <style scoped>
-/* Ensure no conflicting styles */
+/* No conflicting styles */
 </style>

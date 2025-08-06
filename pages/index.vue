@@ -53,6 +53,7 @@ const response = ref('');
 const token = ref('');
 
 const login = async () => {
+  if (typeof window === 'undefined') return;
   try {
     const res = await fetch('http://127.0.0.1:5001/login', {
       method: 'POST',
@@ -66,9 +67,9 @@ const login = async () => {
     });
     const data = await res.json();
     if (data.access_token) {
-      token.value = data.access_token;
       localStorage.setItem('token', data.access_token);
       localStorage.setItem('user_id', data.user_id);
+      token.value = data.access_token;
       response.value = 'Login successful! You can now use the chat.';
     } else {
       response.value = data.msg || 'Login failed';
@@ -79,6 +80,7 @@ const login = async () => {
 };
 
 const sendQuery = async () => {
+  if (typeof window === 'undefined') return;
   if (!query.value) return;
   if (!token.value) {
     response.value = 'Please log in first';

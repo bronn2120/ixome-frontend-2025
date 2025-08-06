@@ -24,10 +24,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-import io from 'socket.io-client';
+import { ref, onMounted, onUnmounted, computed } from 'vue';
 
-const currentUserId = ref(localStorage.getItem('user_id') || 'guest');
+const currentUserId = computed(() => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('user_id') || 'guest';
+  }
+  return 'guest';
+});
 const messages = ref([]);
 const newMessage = ref('');
 const errorMessage = ref('');
@@ -35,6 +39,7 @@ const loading = ref(true);
 const socket = ref(null);
 
 onMounted(() => {
+  if (typeof window === 'undefined') return;
   try {
     const token = localStorage.getItem('token');
     if (!token) {
@@ -43,33 +48,39 @@ onMounted(() => {
       return;
     }
 
-    socket.value = io('http://127.0.0.1:5001', {
-      auth: { token, user_id: currentUserId.value }
-    });
-
-    socket.value.on('connect', () => {
-      console.log('Connected to Socket.IO server');
-      loading.value = false;
-      messages.value.push({
-        id: Date.now(),
-        sender: 'System',
-        text: 'Hey there! I’m your IXome.ai chatbot—ready to help with a smile! 😄',
-        timestamp: new Date().getTime(),
+    import('socket.io-client').then(({ io }) => {
+      socket.value = io('http://127.0.0.1:5001', {
+        auth: { token, user_id: currentUserId.value }
       });
-    });
 
-    socket.value.on('response', (data) => {
-      messages.value.push({
-        id: Date.now(),
-        sender: 'Bot',
-        text: data.text,
-        timestamp: new Date().getTime(),
+      socket.value.on('connect', () => {
+        console.log('Connected to Socket.IO server');
+        loading.value = false;
+        messages.value.push({
+          id: Date.now(),
+          sender: 'System',
+          text: 'Hey there! I’m your IXome.ai chatbot—ready to help with a smile! 😄',
+          timestamp: new Date().getTime(),
+        });
       });
-    });
 
-    socket.value.on('connect_error', (error) => {
-      errorMessage.value = `Connection issue: ${error.message}. Please try logging in again.`;
-      console.error('Socket.IO connection error:', error);
+      socket.value.on('response', (data) => {
+        messages.value.push({
+          id: Date.now(),
+          sender: 'Bot',
+          text: data.text,
+          timestamp: new Date().getTime(),
+        });
+      });
+
+      socket.value.on('connect_error', (error) => {
+        errorMessage.value = `Connection issue: ${error.message}. Please try logging in again.`;
+        console.error('Socket.IO connection error:', error);
+        loading.value = false;
+      });
+    }).catch(error => {
+      errorMessage.value = `Failed to load Socket.IO: ${error.message}`;
+      console.error('Socket.IO import error:', error);
       loading.value = false;
     });
   } catch (error) {

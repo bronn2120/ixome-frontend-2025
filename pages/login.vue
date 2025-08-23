@@ -38,7 +38,7 @@ const router = useRouter();
 
 const handleLogin = async () => {
   try {
-    const response = await fetch('http://127.0.0.1:5001/login', {
+    const response = await fetch('http://127.0.0.1:5003/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -49,16 +49,19 @@ const handleLogin = async () => {
       })
     });
     const data = await response.json();
-    if (data.access_token) {
-      localStorage.setItem('token', data.access_token);
-      localStorage.setItem('user_id', data.user_id);
-      router.push('/');
+    if (data.status === 'success') {
+      localStorage.setItem('token', data.jwt); // Store JWT as 'token'
+      localStorage.setItem('user_id', username.value); // Store username as user_id
+      console.log('Login successful, JWT stored:', data.jwt);
+      router.push('/support');
       error.value = '';
     } else {
-      error.value = data.msg || 'Login failed. Try again.';
+      error.value = data.message || 'Login failed. Try again.';
+      console.error('Login failed:', data.message);
     }
   } catch (err) {
     error.value = 'Login failed. Try again.';
+    console.error('Login error:', err);
   }
 };
 
@@ -76,7 +79,6 @@ useHead({
   position: relative;
   z-index: 1;
 }
-
 .login-form {
   padding: 30px;
   background-color: #ffffff;
@@ -84,28 +86,23 @@ useHead({
   box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
   text-align: center;
 }
-
 .login-form h2 {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 20px;
 }
-
 .login-form p {
   margin-bottom: 30px;
 }
-
 .form-group {
   margin-bottom: 20px;
 }
-
 .form-group label {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 10px;
   display: block;
 }
-
 .form-group input {
   width: 100%;
   padding: 10px;
@@ -113,7 +110,6 @@ useHead({
   border-radius: 5px;
   font-size: 16px;
 }
-
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
@@ -124,12 +120,10 @@ useHead({
   width: 100%;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
-
 .btn-primary:hover {
   background-color: #28a745;
   border-color: #28a745;
 }
-
 .error {
   color: #dc3545;
   font-size: 14px;

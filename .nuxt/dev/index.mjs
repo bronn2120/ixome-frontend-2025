@@ -649,7 +649,7 @@ const _inlineRuntimeConfig = {
   },
   "public": {
     "strapiUrl": "http://127.0.0.1:1337",
-    "backendUrl": "http://127.0.0.1:5001",
+    "backendUrl": "http://127.0.0.1:5003",
     "strapi": {
       "url": "http://127.0.0.1:1337",
       "prefix": "/api",
@@ -660,8 +660,7 @@ const _inlineRuntimeConfig = {
       "cookieName": "strapi_jwt",
       "devtools": false,
       "token": "0cd0e40004e6754b99c87190736e1c94094ae5383fab2896f0cceb79f63df1ce3d788d04f45057fd06830bb22a8d91e9af9d6d79ae28694a94df84dcc4c93b490b3a6c72b795195702e380ec0ca9280ba9ca958cf5ef190d548eba87982c9459453c00d92948c94122606f9f4cee9964bef15f2d406e2e7de45bfac23fc4aa22"
-    },
-    "nuxtSocketIO": {}
+    }
   },
   "strapi": {
     "url": "http://127.0.0.1:1337",
@@ -1032,26 +1031,9 @@ async function errorHandler(error, event) {
   // H3 will handle fallback
 }
 
-const script$1 = `
-if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
-  Object.defineProperty(window, '__NUXT_DEVTOOLS_TIME_METRIC__', {
-    value: {},
-    enumerable: false,
-    configurable: true,
-  })
-}
-window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
-`;
-
-const _sMMctUqlcJkiaIElSoayz2ALNmJyiU6uCv9gn6hqQZw = (function(nitro) {
-  nitro.hooks.hook("render:html", (htmlContext) => {
-    htmlContext.head.push(`<script>${script$1}<\/script>`);
-  });
-});
-
 const rootDir = "/home/vincent/ixome/website/frontend";
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"IXome.ai provides AI-driven smart home solutions with Control4 and Lutron support."}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"},{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"},{"rel":"stylesheet","href":"https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"}],"style":[],"script":[{"src":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js","body":true,"defer":true}],"noscript":[],"title":"IXome.ai - Smart Home Automation"};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"IXome.ai provides AI-driven smart home solutions with Control4 and Lutron support."}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"},{"rel":"stylesheet","href":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"},{"rel":"stylesheet","href":"https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"}],"style":[],"script":[{"src":"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js","body":true,"defer":true}],"noscript":[],"title":"IXome.ai - Smart Home Automation"};
 
 const appRootTag = "div";
 
@@ -1146,8 +1128,7 @@ const _Pno_ehK7SiD9UqMjj74NATB0mjBP_lpl1Npc13m92c4 = (function(nitro) {
 });
 
 const plugins = [
-  _sMMctUqlcJkiaIElSoayz2ALNmJyiU6uCv9gn6hqQZw,
-_LiZU_Ogniqp1XcaKsd_7gqpI5H2ENiFRUiGKzawNoNQ,
+  _LiZU_Ogniqp1XcaKsd_7gqpI5H2ENiFRUiGKzawNoNQ,
 _Pno_ehK7SiD9UqMjj74NATB0mjBP_lpl1Npc13m92c4
 ];
 

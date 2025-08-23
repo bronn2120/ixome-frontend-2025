@@ -1,174 +1,56 @@
 <template>
   <div>
     <BigdataAnalyticsMainBanner />
-    <BigdataAnalyticsWhatWeDo />
-    <BigdataAnalyticsDiscover />
-    <BigdataAnalyticsTeam />
-    <BigdataAnalyticsFunFacts />
-    <BigdataAnalyticsFeedback />
-    <BigdataAnalyticsIndustries />
-    <BigdataAnalyticsOurRecentStory />
-    <BigdataAnalyticsStartYourFreeTrial />
-    <NuxtLink
-      v-if="showChatButton"
-      to="/support"
-      class="floating-chat-button"
-      role="button"
-      aria-label="Open support chat with ixome.ai"
-    >
-      <span>Chat with Us</span>
-    </NuxtLink>
-    <div class="chat-widget">
-      <input v-model="username" type="text" placeholder="Username" required>
-      <input v-model="password" type="password" placeholder="Password" required>
-      <button @click="login">Login</button>
-      <input v-model="query" type="text" placeholder="Quick question?">
-      <button @click="sendQuery">Ask</button>
-      <p v-if="response">{{ response }}</p>
-    </div>
+    <WhatWeDo />
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <div class="section-title">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
+          <div class="bar w-12 h-1 bg-purple-700 mx-auto mb-4 rounded-full transition-all duration-300 hover:scale-140 hover:shadow-2xl hover:shadow-purple-600/80 animate-pulse"></div>
+          <p class="text-gray-600 max-w-xl mx-auto">Explore our smart home automation solutions.</p>
+        </div>
+        <Services />
+      </div>
+    </section>
+    <Team />
+    <Industries />
+    <Discover />
+    <OurRecentStory />
+    <Feedback />
+    <StartYourFreeTrial />
   </div>
 </template>
 
 <script setup>
 import BigdataAnalyticsMainBanner from '~/components/BigdataAnalytics/MainBanner.vue';
-import BigdataAnalyticsWhatWeDo from '~/components/BigdataAnalytics/WhatWeDo.vue';
-import BigdataAnalyticsDiscover from '~/components/BigdataAnalytics/Discover.vue';
-import BigdataAnalyticsTeam from '~/components/BigdataAnalytics/Team.vue';
-import BigdataAnalyticsFunFacts from '~/components/BigdataAnalytics/FunFacts.vue';
-import BigdataAnalyticsFeedback from '~/components/BigdataAnalytics/Feedback.vue';
-import BigdataAnalyticsIndustries from '~/components/BigdataAnalytics/Industries.vue';
-import BigdataAnalyticsOurRecentStory from '~/components/BigdataAnalytics/OurRecentStory.vue';
-import BigdataAnalyticsStartYourFreeTrial from '~/components/BigdataAnalytics/StartYourFreeTrial.vue';
-import { NuxtLink } from '#components';
-import { ref, computed } from 'vue';
+import WhatWeDo from '~/components/BigdataAnalytics/WhatWeDo.vue';
+import Services from '~/components/BigdataAnalytics/Services.vue';
+import Team from '~/components/BigdataAnalytics/Team.vue';
+import Industries from '~/components/BigdataAnalytics/Industries.vue';
+import Discover from '~/components/BigdataAnalytics/Discover.vue';
+import OurRecentStory from '~/components/BigdataAnalytics/OurRecentStory.vue';
+import Feedback from '~/components/BigdataAnalytics/Feedback.vue';
+import StartYourFreeTrial from '~/components/BigdataAnalytics/StartYourFreeTrial.vue';
+import { definePageMeta } from '#imports';
 
-const showChatButton = computed(() => {
-  return useRoute().path !== '/support';
+definePageMeta({
+  layout: 'default',
 });
-
-const username = ref('');
-const password = ref('');
-const query = ref('');
-const response = ref('');
-const token = ref('');
-
-const login = async () => {
-  if (typeof window === 'undefined') return;
-  try {
-    const res = await fetch('http://127.0.0.1:5001/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        username: username.value,
-        password: password.value
-      })
-    });
-    const data = await res.json();
-    if (data.access_token) {
-      localStorage.setItem('token', data.access_token);
-      localStorage.setItem('user_id', data.user_id);
-      token.value = data.access_token;
-      response.value = 'Login successful! You can now use the chat.';
-    } else {
-      response.value = data.msg || 'Login failed';
-    }
-  } catch (e) {
-    response.value = 'Error logging in';
-  }
-};
-
-const sendQuery = async () => {
-  if (typeof window === 'undefined') return;
-  if (!query.value) return;
-  if (!token.value) {
-    response.value = 'Please log in first';
-    return;
-  }
-  try {
-    const res = await fetch('http://127.0.0.1:5001/process', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token.value}`
-      },
-      body: JSON.stringify({
-        input_type: 'text',
-        input_data: query.value
-      })
-    });
-    const data = await res.json();
-    response.value = data.result || data.error || 'Error: No response';
-  } catch (e) {
-    response.value = 'Error: Failed to send query';
-  }
-};
 </script>
 
 <style scoped>
-.floating-chat-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007bff;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
-  z-index: 1000;
-  font-size: 1.1rem;
-  font-family: Arial, sans-serif;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.section-title .bar {
+  transition: all 0.3s ease;
 }
-.floating-chat-button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
+.section-title .bar:hover {
+  transform: scale(1.4);
+  box-shadow: 0 0 25px rgba(108, 77, 244, 0.9);
 }
-.floating-chat-button:focus {
-  outline: 3px solid #0056b3;
-  outline-offset: 2px;
-  background-color: #0056b3;
+.section-title .bar {
+  animation: pulse 1.5s infinite;
 }
-.floating-chat-button span {
-  display: inline-block;
-  text-align: center;
-  font-weight: 500;
-}
-.chat-widget {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background: white;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  z-index: 999;
-}
-.chat-widget input {
-  display: block;
-  margin-bottom: 10px;
-  padding: 5px;
-  width: 200px;
-}
-.chat-widget button {
-  padding: 5px 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-@media (max-width: 768px) {
-  .floating-chat-button {
-    bottom: 10px;
-    right: 10px;
-    padding: 10px 18px;
-    font-size: 1rem;
-  }
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
 }
 </style>

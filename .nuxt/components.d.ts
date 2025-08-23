@@ -22,8 +22,9 @@ interface _GlobalComponents {
     'BigdataAnalyticsStartYourFreeTrial': typeof import("../components/BigdataAnalytics/StartYourFreeTrial.vue")['default']
     'BigdataAnalyticsTeam': typeof import("../components/BigdataAnalytics/Team.vue")['default']
     'BigdataAnalyticsWhatWeDo': typeof import("../components/BigdataAnalytics/WhatWeDo.vue")['default']
+    'ChatWidget': typeof import("../components/ChatWidget.vue")['default']
     'Footer': typeof import("../components/Footer.vue")['default']
-    'IoSocketStatus': typeof import("../node_modules/nuxt-socket-io/lib/components/SocketStatus")['default']
+    'HeaderFive': typeof import("../components/HeaderFive.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
     'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -59,8 +60,9 @@ interface _GlobalComponents {
     'LazyBigdataAnalyticsStartYourFreeTrial': LazyComponent<typeof import("../components/BigdataAnalytics/StartYourFreeTrial.vue")['default']>
     'LazyBigdataAnalyticsTeam': LazyComponent<typeof import("../components/BigdataAnalytics/Team.vue")['default']>
     'LazyBigdataAnalyticsWhatWeDo': LazyComponent<typeof import("../components/BigdataAnalytics/WhatWeDo.vue")['default']>
+    'LazyChatWidget': LazyComponent<typeof import("../components/ChatWidget.vue")['default']>
     'LazyFooter': LazyComponent<typeof import("../components/Footer.vue")['default']>
-    'LazyIoSocketStatus': LazyComponent<typeof import("../node_modules/nuxt-socket-io/lib/components/SocketStatus")['default']>
+    'LazyHeaderFive': LazyComponent<typeof import("../components/HeaderFive.vue")['default']>
     'LazyNuxtWelcome': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
     'LazyNuxtLayout': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
     'LazyNuxtErrorBoundary': LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
@@ -102,8 +104,9 @@ export const BigdataAnalyticsServices: typeof import("../components/BigdataAnaly
 export const BigdataAnalyticsStartYourFreeTrial: typeof import("../components/BigdataAnalytics/StartYourFreeTrial.vue")['default']
 export const BigdataAnalyticsTeam: typeof import("../components/BigdataAnalytics/Team.vue")['default']
 export const BigdataAnalyticsWhatWeDo: typeof import("../components/BigdataAnalytics/WhatWeDo.vue")['default']
+export const ChatWidget: typeof import("../components/ChatWidget.vue")['default']
 export const Footer: typeof import("../components/Footer.vue")['default']
-export const IoSocketStatus: typeof import("../node_modules/nuxt-socket-io/lib/components/SocketStatus")['default']
+export const HeaderFive: typeof import("../components/HeaderFive.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -139,8 +142,9 @@ export const LazyBigdataAnalyticsServices: LazyComponent<typeof import("../compo
 export const LazyBigdataAnalyticsStartYourFreeTrial: LazyComponent<typeof import("../components/BigdataAnalytics/StartYourFreeTrial.vue")['default']>
 export const LazyBigdataAnalyticsTeam: LazyComponent<typeof import("../components/BigdataAnalytics/Team.vue")['default']>
 export const LazyBigdataAnalyticsWhatWeDo: LazyComponent<typeof import("../components/BigdataAnalytics/WhatWeDo.vue")['default']>
+export const LazyChatWidget: LazyComponent<typeof import("../components/ChatWidget.vue")['default']>
 export const LazyFooter: LazyComponent<typeof import("../components/Footer.vue")['default']>
-export const LazyIoSocketStatus: LazyComponent<typeof import("../node_modules/nuxt-socket-io/lib/components/SocketStatus")['default']>
+export const LazyHeaderFive: LazyComponent<typeof import("../components/HeaderFive.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>

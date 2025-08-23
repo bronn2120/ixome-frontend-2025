@@ -38,9 +38,6 @@
       "nitropack": [
         "../node_modules/nitropack"
       ],
-      "defu": [
-        "../node_modules/defu"
-      ],
       "h3": [
         "../node_modules/h3"
       ],
@@ -124,8 +121,6 @@
     "./types/nitro-nuxt.d.ts",
     "../node_modules/runtime/server",
     "../node_modules/dist/runtime/server",
-    "../node_modules/nuxt/node_modules/runtime/server",
-    "../node_modules/nuxt/node_modules/dist/runtime/server",
     "./types/nitro.d.ts",
     "../**/*",
     "../server/**/*"
@@ -136,8 +131,6 @@
     "../node_modules/@nuxtjs/strapi/node_modules",
     "../node_modules/@nuxtjs/tailwindcss/node_modules",
     "../node_modules/@nuxtjs/color-mode/node_modules",
-    "../node_modules/nuxt-socket-io/node_modules",
-    "../node_modules/nuxt/node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",
     "../dist"
   ]

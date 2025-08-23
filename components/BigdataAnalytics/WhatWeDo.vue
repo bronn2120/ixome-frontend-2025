@@ -4,21 +4,19 @@
       <div class="section-title">
         <h2>What We Do</h2>
         <div class="bar"></div>
-        <p>
-          At IXome.ai, we simplify smart home management with AI-driven tools tailored for Control4 and Lutron users.
-        </p>
+        <p>At IXome.ai, we simplify smart home management with AI-driven tools tailored for Control4 and Lutron users.</p>
       </div>
 
       <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="single-what-we-do-box">
             <div class="icon">
-              <i class="flaticon-monitor"></i>
+              <client-only>
+                <font-awesome-icon :icon="['fas', 'wrench']" class="circular-icon bg-purple-100 text-purple-600" />
+              </client-only>
             </div>
             <h3><NuxtLink to="/services">Smart Home Troubleshooting</NuxtLink></h3>
-            <p>
-              Get fast fixes for common issues using our chatbot, saving you time and frustration.
-            </p>
+            <p>Get fast fixes for common issues using our chatbot, saving you time and frustration.</p>
             <NuxtLink to="/services" class="link">Control4 Solutions</NuxtLink>
             <NuxtLink to="/services" class="link">Lutron Fixes</NuxtLink>
             <NuxtLink to="/services" class="read-more-btn">
@@ -32,12 +30,12 @@
         <div class="col-lg-4 col-md-6 col-sm-6">
           <div class="single-what-we-do-box">
             <div class="icon">
-              <i class="flaticon-idea"></i>
+              <client-only>
+                <font-awesome-icon :icon="['fas', 'coins']" class="circular-icon bg-green-100 text-green-600" />
+              </client-only>
             </div>
             <h3><NuxtLink to="/pricing">Flexible Subscriptions</NuxtLink></h3>
-            <p>
-              Choose a plan that fits your needs, with tokens for on-demand support whenever you need it.
-            </p>
+            <p>Choose a plan that fits your needs, with tokens for on-demand support.</p>
             <NuxtLink to="/pricing" class="link">Basic Plan</NuxtLink>
             <NuxtLink to="/pricing" class="link">Pro Plan</NuxtLink>
             <NuxtLink to="/pricing" class="read-more-btn">
@@ -51,12 +49,12 @@
         <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
           <div class="single-what-we-do-box">
             <div class="icon">
-              <i class="flaticon-software"></i>
+              <client-only>
+                <font-awesome-icon :icon="['fas', 'robot']" class="circular-icon bg-blue-100 text-blue-600" />
+              </client-only>
             </div>
             <h3><NuxtLink to="/about">Agentic Automation</NuxtLink></h3>
-            <p>
-              Our AI agents handle updates and tasks automatically, so your system stays current without effort.
-            </p>
+            <p>Our AI agents handle updates and tasks automatically, keeping your system current.</p>
             <NuxtLink to="/about" class="link">CEO Agent</NuxtLink>
             <NuxtLink to="/about" class="link">Content Agent</NuxtLink>
             <NuxtLink to="/about" class="read-more-btn">
@@ -73,11 +71,11 @@
 
 <script>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faWrench, faCoins, faRobot } from '@fortawesome/free-solid-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { NuxtLink } from '#components';
 
-library.add(faArrowRight);
+library.add(faArrowRight, faWrench, faCoins, faRobot);
 
 export default {
   name: 'WhatWeDo',
@@ -133,6 +131,20 @@ export default {
 }
 .single-what-we-do-box .icon {
   margin-bottom: 10px;
+}
+.circular-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+.circular-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 .single-what-we-do-box h3 {
   font-size: 22px;

@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container mx-auto px-4">
         <NuxtLink class="navbar-brand" to="/">
-          <img src="/logo.png" alt="IXome.ai Logo" class="h-12" loading="lazy" />
+          <img :src="logoSrc" alt="IXome.ai Logo" class="h-12" loading="lazy" @error="onLogoError" />
         </NuxtLink>
         <button
           class="navbar-toggler"
@@ -36,25 +36,26 @@
 
 <script setup>
 import { NuxtLink } from '#components';
-import { onMounted } from 'vue';
+import { ref, onMounted } from 'vue';
+
+const logoSrc = ref('~/assets/images/logo.png'); // Default path using Nuxt alias
+const onLogoError = () => {
+  logoSrc.value = 'https://via.placeholder.com/200x50?text=IXome.ai+Logo'; // Fallback placeholder if logo fails
+};
 
 onMounted(() => {
   console.log('HeaderFive.vue mounted');
-  if (typeof window !== 'undefined') {
-    const bootstrap = window.bootstrap;
-    if (bootstrap) {
-      console.log('Bootstrap JS loaded');
-      const navbarToggler = document.querySelector('.navbar-toggler');
-      const navbarCollapse = document.querySelector('#navbarNav');
-      if (navbarToggler && navbarCollapse) {
-        console.log('Navbar elements found, initializing Bootstrap collapse');
-        new bootstrap.Collapse(navbarCollapse, { toggle: false });
-      } else {
-        console.error('Navbar toggler or collapse not found');
-      }
+  if (typeof window !== 'undefined' && window.bootstrap) {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('#navbarNav');
+    if (navbarToggler && navbarCollapse) {
+      console.log('Navbar elements found, initializing Bootstrap collapse');
+      new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
     } else {
-      console.error('Bootstrap JS not loaded');
+      console.error('Navbar toggler or collapse not found');
     }
+  } else {
+    console.error('Bootstrap not found on window object');
   }
 });
 </script>
@@ -70,12 +71,20 @@ onMounted(() => {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 .navbar-nav .nav-link {
   font-weight: 500;
   font-size: 1rem;
   color: #ffffff !important;
   transition: color 0.3s ease;
   padding: 0.5rem 1rem;
+  display: block;
 }
 
 .navbar-nav .nav-link:hover,
@@ -91,8 +100,13 @@ onMounted(() => {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+.navbar-collapse {
+  background-color: #343a40;
+}
+
 @media (max-width: 991px) {
   .navbar-nav {
+    flex-direction: column;
     padding-top: 0.5rem;
     background-color: #343a40;
   }

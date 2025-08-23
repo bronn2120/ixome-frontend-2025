@@ -40,5 +40,4 @@ export { useStrapiVersion } from '../node_modules/@nuxtjs/strapi/dist/runtime/co
 export { useStrapi } from '../node_modules/@nuxtjs/strapi/dist/runtime/composables-v4/useStrapi';
 export { useStrapi4 } from '../node_modules/@nuxtjs/strapi/dist/runtime/composables-v4/useStrapi4';
 export { useColorMode } from '../node_modules/@nuxtjs/color-mode/dist/runtime/composables';
-export { useNuxtDevTools } from '../node_modules/nuxt/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';
 export { definePageMeta } from '../node_modules/nuxt/dist/pages/runtime/composables';

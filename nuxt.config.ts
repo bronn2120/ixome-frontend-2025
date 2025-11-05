@@ -13,6 +13,5 @@ export default defineNuxtConfig({
   tailwindcss: { cssPath: "~/assets/css/tailwind.css", configPath: "tailwind.config.js", viewer: true },
   devtools: { enabled: true },
   nitro: { prerender: { crawlLinks: true, routes: ["/", "/agents", "/subscribe", "/support", "/blog", "/contact"], ignore: ["/api/*"] } },
-  test: { vitest: true },
-  content: { db: { engine: "memory" } }, // Memory to avoid sqlite issues
+  content: { experimental: { sqliteConnector: "better-sqlite3" } }, // Default db, explicit for clarity
 });

@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts', // With messages
   },
   ogImage: {
-    enabled: false, // Disabled to eliminate SSR warn; re-enable if needed with SSR true
+    enabled: true, // Disabled to eliminate SSR warn; re-enable if needed with SSR true
   },
   nitro: {
     // Nitro options if needed

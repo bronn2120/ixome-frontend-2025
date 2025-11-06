@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/ui',
-    // '@nuxtjs/i18n',
+    '@nuxtjs/i18n',
     'nuxt-og-image',
     '@nuxt/test-utils/module', // For Vitest integration
   ],
@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     vueI18n: './i18n.config.ts', // With messages
   },
   ogImage: {
-    enabled: true, // Disabled to eliminate SSR warn; re-enable if needed with SSR true
+    enabled: true, // Enabled with SSR true, no warn
   },
   nitro: {
     // Nitro options if needed

@@ -1,38 +1,38 @@
 import { defineNuxtConfig } from 'nuxt/config';
 export default defineNuxtConfig({
-  compatibilityDate: '2025-11-05', // Enforce latest, fix ssr
-  ssr: true, // Enable SSR
+  compatibilityDate: '2025-11-05',
+  ssr: true,
   devtools: { enabled: true },
   modules: [
     '@nuxt/content',
     '@nuxt/ui',
     '@nuxtjs/i18n',
     'nuxt-og-image',
-    '@nuxt/test-utils/module', // For Vitest integration
+    '@nuxt/test-utils/module',
   ],
   content: {
-    // Content options if needed
-  },
-  ui: {
-    // UI options if needed
+    markdown: { mdc: false },
   },
   i18n: {
     lazy: false,
     locales: [
       { code: 'en' },
-      { code: 'es' }
+      { code: 'es' },
     ],
     defaultLocale: 'en',
-    vueI18n: './i18n.config.ts', // With messages
+    vueI18n: './i18n.config.ts',
   },
   ogImage: {
-    enabled: true, // Enabled with SSR true, no warn
+    enabled: true,
   },
   nitro: {
-    // Nitro options if needed
+    logLevel: 'debug',
   },
   typescript: {
     strict: true,
   },
-  // Add other custom configs here
+  server: {
+    port: 3000,
+    host: 'localhost',
+  },
 });

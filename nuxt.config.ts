@@ -3,6 +3,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import { resolve } from 'path';
 
 export default defineNuxtConfig({
+  postcss: { plugins: { tailwindcss: {}, autoprefixer: {} } },
   ssr: true,
   ssr: true,
   devtools: { enabled: true },

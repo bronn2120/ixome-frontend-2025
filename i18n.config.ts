@@ -2,13 +2,11 @@ export default {
   legacy: false,
   messages: {
     en: {
-export default {
-    welcome: 'Welcome'
+      welcome: 'Welcome'
     },
     es: {
-export default {
-    welcome: 'Bienvenido'
+      welcome: 'Bienvenido'
     }
   },
   fallbackLocale: 'en'
-}
+};

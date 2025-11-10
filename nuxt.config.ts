@@ -1,38 +1,42 @@
 import { defineNuxtConfig } from 'nuxt/config';
+import tsconfigPaths from 'vite-tsconfig-paths';
+import { resolve } from 'path';
+
 export default defineNuxtConfig({
-  compatibilityDate: '2025-11-05',
+  ssr: true,
   ssr: true,
   devtools: { enabled: true },
-  modules: [
-    '@nuxt/content',
-    '@nuxt/ui',
-    '@nuxtjs/i18n',
-    'nuxt-og-image',
-    '@nuxt/test-utils/module',
-  ],
-  content: {
-    markdown: { mdc: false },
+  modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@nuxt/content', 'nuxt-og-image'],
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: { '@tailwindcss/postcss': {}, autoprefixer: {} },
   },
   i18n: {
-    lazy: false,
-    locales: [
-      { code: 'en' },
-      { code: 'es' },
-    ],
-    defaultLocale: 'en',
     vueI18n: './i18n.config.ts',
+    strategy: 'prefix_except_default',
+    defaultLocale: 'en',
+  },
+  runtimeConfig: {
+    public: {
+      stripePublicKey: process.env.STRIPE_PUBLIC_KEY,
+      gaId: process.env.GA_ID,
+    },
+  },
+  content: {
+    documentDriven: true,
+    sources: { content: { driver: 'fs', prefix: '/blog', base: 'content' } },
   },
   ogImage: {
-    enabled: true,
+    defaults: { width: 1200, height: 630 },
   },
-  nitro: {
-    logLevel: 'debug',
-  },
-  typescript: {
-    strict: true,
-  },
-  server: {
-    port: 3000,
-    host: 'localhost',
+  compatibilityDate: '2025-11-08',
+  vite: {
+    resolve: {
+      alias: {
+        '~': resolve(__dirname, '.'),
+        '@': resolve(__dirname, '.'),
+      },
+    },
+    plugins: [tsconfigPaths()],
   },
 });

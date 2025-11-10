@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { mountSuspended } from '@nuxt/test-utils/runtime';
 import { mockNuxtImport } from '@nuxt/test-utils/runtime';
 import App from '~/app.vue';
-mockNuxtImport('useRoute', () => () => ({ path: '/', meta: { layout: 'default' }, matched: [] }));
+mockNuxtImport('useRoute', () => () => ({ path: '/', meta: { layout: 'default' }, matched: [{ }] }));
 describe('App', () => {
   it('renders', async () => {
     const wrapper = await mountSuspended(App);

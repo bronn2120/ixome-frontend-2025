@@ -146,29 +146,8 @@
       "#mdc-imports": [
         "./mdc-imports"
       ],
-      "#og-image": [
-        "../node_modules/nuxt-og-image/dist/runtime"
-      ],
-      "#og-image/*": [
-        "../node_modules/nuxt-og-image/dist/runtime/*"
-      ],
-      "#og-image-cache": [
-        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/cache/lru"
-      ],
-      "#nuxt-og-image-utils": [
-        "../node_modules/nuxt-og-image/dist/runtime/shared"
-      ],
-      "#site-config": [
-        "../node_modules/nuxt-site-config/dist/runtime"
-      ],
-      "#site-config/*": [
-        "../node_modules/nuxt-site-config/dist/runtime/*"
-      ],
       "#unhead/composables": [
         "../node_modules/nuxt/dist/head/runtime/composables"
-      ],
-      "#internal/nuxt-site-config": [
-        "../node_modules/nuxt-site-config/dist/runtime/server/composable-barrel-deprecated"
       ],
       "#content/dump": [
         "./content/database.compressed"
@@ -178,27 +157,6 @@
       ],
       "#content/local-adapter": [
         "./db0/connectors/better-sqlite3"
-      ],
-      "#og-image/renderers/satori": [
-        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/satori/renderer"
-      ],
-      "#og-image/renderers/chromium": [
-        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/chromium/renderer"
-      ],
-      "#og-image/bindings/css-inline": [
-        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
-      ],
-      "#og-image/bindings/sharp": [
-        "../node_modules/nuxt-og-image/dist/runtime/mock/empty"
-      ],
-      "#og-image/bindings/resvg": [
-        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/bindings/resvg/node"
-      ],
-      "#og-image/bindings/satori": [
-        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/bindings/satori/node"
-      ],
-      "#og-image/bindings/chromium": [
-        "../node_modules/nuxt-og-image/dist/runtime/server/og-image/bindings/chromium/chrome-launcher"
       ]
     },
     "lib": [
@@ -212,8 +170,6 @@
     "./types/nitro-nuxt.d.ts",
     "../node_modules/runtime/server",
     "../node_modules/dist/runtime/server",
-    "../node_modules/nuxt-site-config/dist/runtime/server",
-    "../node_modules/nuxt-site-config/dist/dist/runtime/server",
     "../shared/**/*.d.ts",
     "./types/nitro.d.ts",
     "../server/**/*"
@@ -225,7 +181,6 @@
     "../node_modules/@nuxtjs/i18n/node_modules",
     "../node_modules/@nuxtjs/mdc/node_modules",
     "../node_modules/@nuxt/content/node_modules",
-    "../node_modules/nuxt-site-config/node_modules",
     "../node_modules/nuxt-og-image/node_modules",
     "../node_modules/@nuxt/devtools/node_modules",
     "../node_modules/@nuxt/telemetry/node_modules",

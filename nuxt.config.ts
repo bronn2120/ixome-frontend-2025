@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     sources: { content: { driver: 'fs', prefix: '/blog', base: 'content' } },
   },
   ogImage: {
+    enabled: false,
     defaults: { width: 1200, height: 630 },
   },
   compatibilityDate: '2025-11-08',

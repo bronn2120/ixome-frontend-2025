@@ -1,6 +1,6 @@
 /// <reference types="@pinia/nuxt" />
-/// <reference types="@nuxtjs/i18n" />
 /// <reference types="@nuxt/content" />
+/// <reference types="@nuxtjs/i18n" />
 /// <reference types="nuxt-og-image" />
 /// <reference types="@nuxt/devtools" />
 /// <reference types="@nuxt/telemetry" />

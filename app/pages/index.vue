@@ -15,7 +15,6 @@
     <Team />
     <Industries />
     <Discover />
-    <ClientOnly><OurRecentStory /></ClientOnly>
     <Feedback />
     <StartYourFreeTrial />
   </div>
@@ -28,7 +27,6 @@ import Services from '~/components/BigdataAnalytics/Services.vue';
 import Team from '~/components/BigdataAnalytics/Team.vue';
 import Industries from '~/components/BigdataAnalytics/Industries.vue';
 import Discover from '~/components/BigdataAnalytics/Discover.vue';
-import OurRecentStory from '~/components/BigdataAnalytics/OurRecentStory.vue';
 import Feedback from '~/components/BigdataAnalytics/Feedback.vue';
 import StartYourFreeTrial from '~/components/BigdataAnalytics/StartYourFreeTrial.vue';
 import { definePageMeta } from '#imports';

@@ -49,6 +49,7 @@ import { faServer, faLightbulb, faRobot } from '@fortawesome/free-solid-svg-icon
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 library.add(faServer, faLightbulb, faRobot);
+faIconName,
 
 useHead({
   title: 'IXome.ai - Services',

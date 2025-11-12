@@ -3,12 +3,12 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import { resolve } from 'path';
 
 export default defineNuxtConfig({
-  postcss: { plugins: { tailwindcss: {}, autoprefixer: {} } },
-  ssr: true,
-  ssr: true,
   devtools: { enabled: true },
   modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@nuxt/content', 'nuxt-og-image'],
-  css: ['~/assets/css/main.css'],
+  css: [
+    '~/assets/css/main.css',
+    '~/assets/css/tailwind.css',
+  ],
   postcss: {
     plugins: { '@tailwindcss/postcss': {}, autoprefixer: {} },
   },
@@ -28,7 +28,6 @@ export default defineNuxtConfig({
     sources: { content: { driver: 'fs', prefix: '/blog', base: 'content' } },
   },
   ogImage: {
-    enabled: false,
     defaults: { width: 1200, height: 630 },
   },
   compatibilityDate: '2025-11-08',
@@ -40,5 +39,22 @@ export default defineNuxtConfig({
       },
     },
     plugins: [tsconfigPaths()],
+  },
+  plugins: [
+    { src: '~/plugins/fontawesome.js', ssr: false },
+  ],
+  build: {
+    transpile: ['gsap', '@fortawesome/vue-fontawesome', 'bootstrap'],
+  },
+  app: {
+    head: {
+      link: [
+        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' },
+        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' },
+      ],
+      script: [
+        { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', body: true, defer: true },
+      ],
+    },
   },
 });

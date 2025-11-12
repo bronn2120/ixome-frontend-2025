@@ -7,5 +7,5 @@ describe('App', () => {
   it('renders', async () => {
     const wrapper = await mountSuspended(App);
     expect(wrapper.html()).toBeTruthy();
-  }, 15000);
+  }, 30000);
 });

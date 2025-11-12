@@ -49,7 +49,6 @@ const { data } = await useAsyncData('footer', async () => {
     const response = await $fetch('/api/footers?populate=*', {
       baseURL: 'http://127.0.0.1:1337'
     });
-    console.log('Raw footer response:', response);
     return response.data && response.data.length > 0 ? response.data[0] : null;
   } catch (err) {
     console.error('Footer fetch error:', err);
@@ -60,7 +59,6 @@ const { data } = await useAsyncData('footer', async () => {
 
 if (data.value) {
   footerData.value = data.value;
-  console.log('Footer data loaded:', footerData.value);
 } else if (!error.value) {
   console.error('No footer data found');
 }

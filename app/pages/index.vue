@@ -1,1 +1,56 @@
-<template> <div class="min-h-screen bg-gradient-to-br from-purple-900 to-indigo-900 text-white"> <header class="container mx-auto py-6 flex justify-between items-center"> <h1 class="text-3xl font-bold">Ixome AI</h1> <nav> <ul class="flex space-x-6"> <li><NuxtLink to="/about" class="hover:text-indigo-300">About</NuxtLink></li> <li><NuxtLink to="/services" class="hover:text-indigo-300">Services</NuxtLink></li> <li><NuxtLink to="/blog" class="hover:text-indigo-300">Blog</NuxtLink></li> <li><NuxtLink to="/subscribe" class="hover:text-indigo-300">Subscribe</NuxtLink></li> <li><NuxtLink to="/support" class="hover:text-indigo-300">Support</NuxtLink></li> </ul> </nav> </header> <section class="hero relative"> <img src="/assets/hero.png" alt="Futuristic Smart Home" class="w-full h-96 object-cover rounded-lg shadow-xl filter drop-shadow-[0_0_10px_rgba(79,70,229,0.5)]"> <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50"> <div class="text-center"> <h2 class="text-5xl drop-shadow-[0_0_5px_rgba(79,70,229,0.5)] font-extrabold mb-4">AI-Driven Smart Home Support</h2> <p class="text-xl mb-6">Integrate Lutron & Control4 Seamlessly</p> <NuxtLink to="/subscribe" class="bg-indigo-600 px-6 py-3 rounded-full hover:bg-indigo-700">Get Started</NuxtLink> </div> </div> </section> <section class="py-12 container mx-auto"> <h3 class="text-3xl font-bold text-center mb-8">Our Services</h3> <div class="grid grid-cols-1 md:grid-cols-3 gap-8"> <div class="p-6 bg-white/10 rounded-lg shadow-md text-center"> <img src="https://www.shutterstock.com/image-vector/smart-home-automation-icons-set-260nw-2169595601.jpg" alt="Lighting" class="mx-auto h-24 mb-4 filter drop-shadow-[0_0_5px_rgba(79,70,229,0.5)]"> <h4 class="text-2xl font-semibold mb-2">Lighting Controls</h4> <p>AI-powered Lutron integration.</p> </div> <div class="p-6 bg-white/10 rounded-lg shadow-md text-center"> <img src="https://www.shutterstock.com/image-vector/home-automation-icon-set-smart-260nw-2533285037.jpg" alt="Audio" class="mx-auto h-24 mb-4 filter drop-shadow-[0_0_5px_rgba(79,70,229,0.5)]"> <h4 class="text-2xl font-semibold mb-2">Audio & Media</h4> <p>Seamless Control4 media rooms.</p> </div> <div class="p-6 bg-white/10 rounded-lg shadow-md text-center"> <img src="https://www.shutterstock.com/image-vector/smart-home-technology-digital-device-260nw-2291213331.jpg" alt="Agents" class="mx-auto h-24 mb-4 filter drop-shadow-[0_0_5px_rgba(79,70,229,0.5)]"> <h4 class="text-2xl font-semibold mb-2">AI Agents</h4> <p>Virtual departments for support.</p> </div> </div> </section> </div> </template> <style> @media (max-width: 768px) { h2 { font-size: 3rem; } .grid { grid-template-columns: 1fr; } } </style>
+<template>
+  <div>
+    <BigdataAnalyticsMainBanner />
+    <WhatWeDo />
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <div class="section-title">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Services</h2>
+          <div class="bar w-12 h-1 bg-purple-700 mx-auto mb-4 rounded-full transition-all duration-300 hover:scale-140 hover:shadow-2xl hover:shadow-purple-600/80 animate-pulse"></div>
+          <p class="text-gray-600 max-w-xl mx-auto">Explore our smart home automation solutions.</p>
+        </div>
+        <Services />
+      </div>
+    </section>
+    <Team />
+    <Industries />
+    <Discover />
+    <OurRecentStory />
+    <Feedback />
+    <StartYourFreeTrial />
+  </div>
+</template>
+
+<script setup>
+import BigdataAnalyticsMainBanner from '~/components/BigdataAnalytics/MainBanner.vue';
+import WhatWeDo from '~/components/BigdataAnalytics/WhatWeDo.vue';
+import Services from '~/components/BigdataAnalytics/Services.vue';
+import Team from '~/components/BigdataAnalytics/Team.vue';
+import Industries from '~/components/BigdataAnalytics/Industries.vue';
+import Discover from '~/components/BigdataAnalytics/Discover.vue';
+import OurRecentStory from '~/components/BigdataAnalytics/OurRecentStory.vue';
+import Feedback from '~/components/BigdataAnalytics/Feedback.vue';
+import StartYourFreeTrial from '~/components/BigdataAnalytics/StartYourFreeTrial.vue';
+import { definePageMeta } from '#imports';
+
+definePageMeta({
+  layout: 'default',
+});
+</script>
+
+<style scoped>
+.section-title .bar {
+  transition: all 0.3s ease;
+}
+.section-title .bar:hover {
+  transform: scale(1.4);
+  box-shadow: 0 0 25px rgba(108, 77, 244, 0.9);
+}
+.section-title .bar {
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+</style>

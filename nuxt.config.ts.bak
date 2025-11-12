@@ -1,42 +1,44 @@
 import { defineNuxtConfig } from 'nuxt/config';
+import tsconfigPaths from 'vite-tsconfig-paths';
+import { resolve } from 'path';
+
 export default defineNuxtConfig({
-  server: { port: 3000 },
-  host: "localhost",
-  port: 3000,
-  compatibilityDate: '2025-11-05', // Enforce latest, fix ssr
-  ssr: true, // Enable SSR
+  postcss: { plugins: { tailwindcss: {}, autoprefixer: {} } },
+  ssr: true,
+  ssr: true,
   devtools: { enabled: true },
-  modules: [
-    '@nuxt/content',
-    '@nuxt/ui',
-    '@nuxtjs/i18n',
-    'nuxt-og-image',
-    '@nuxt/test-utils/module', // For Vitest integration
-  ],
-  content: {
-    markdown: { mdc: false },
-    // Content options if needed
-  },
-  ui: {
-    // UI options if needed
+  modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@nuxt/content', 'nuxt-og-image'],
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: { '@tailwindcss/postcss': {}, autoprefixer: {} },
   },
   i18n: {
-    lazy: false,
-    locales: [
-      { code: 'en' },
-      { code: 'es' }
-    ],
+    vueI18n: './i18n.config.ts',
+    strategy: 'prefix_except_default',
     defaultLocale: 'en',
-    vueI18n: './i18n.config.ts', // With messages
+  },
+  runtimeConfig: {
+    public: {
+      stripePublicKey: process.env.STRIPE_PUBLIC_KEY,
+      gaId: process.env.GA_ID,
+    },
+  },
+  content: {
+    documentDriven: true,
+    sources: { content: { driver: 'fs', prefix: '/blog', base: 'content' } },
   },
   ogImage: {
-    enabled: true, // Enabled with SSR true, no warn
+    enabled: false,
+    defaults: { width: 1200, height: 630 },
   },
-  nitro: {
-    // Nitro options if needed
+  compatibilityDate: '2025-11-08',
+  vite: {
+    resolve: {
+      alias: {
+        '~': resolve(__dirname, '.'),
+        '@': resolve(__dirname, '.'),
+      },
+    },
+    plugins: [tsconfigPaths()],
   },
-  typescript: {
-    strict: true,
-  },
-  // Add other custom configs here
 });

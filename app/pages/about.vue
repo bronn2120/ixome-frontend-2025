@@ -12,7 +12,7 @@
         </div>
         <div class="col-lg-6 col-md-12">
           <div class="about-image">
-            <img src="~/assets/img/about.jpg" alt="About IXome.ai" loading="lazy" class="rounded-md w-full">
+            <img src="~~/assets/img/about.jpg" alt="About IXome.ai" loading="lazy" class="rounded-md w-full">
           </div>
         </div>
       </div>

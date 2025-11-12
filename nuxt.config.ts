@@ -2,15 +2,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2024-11-11',
   modules: [
- googleFonts: {
-  families: {
-    Roboto: true,
-  },
- },
- i18n: {
-  defaultLocale: 'en',
-  locales: ['en'],
- },
     '@nuxtjs/seo',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/strapi',
@@ -26,18 +17,27 @@ export default defineNuxtConfig({
     '@nuxtjs/device',
     '@nuxtjs/google-fonts',
   ],
+  googleFonts: {
+    families: {
+      Roboto: true,
+    },
+  },
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
   plugins: [
     '~/plugins/suppress-router-warn.js',
     '~/plugins/fontawesome.js',
   ],
   css: ['~/assets/css/tailwind.css'],
   build: {
- postcss: {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
- },
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
     transpile: ['@fortawesome/vue-fontawesome'],
   },
   runtimeConfig: {

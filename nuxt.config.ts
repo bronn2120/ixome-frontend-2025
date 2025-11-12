@@ -1,13 +1,13 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2024-11-11',
-  extends: ['nuxt-seo-kit'],
+  extends: ['nuxt-seo'],
 modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/strapi',
     '@nuxt/content',
     '@nuxtjs/fontawesome',
-    'nuxt-seo-kit',
+    'nuxt-seo',
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',

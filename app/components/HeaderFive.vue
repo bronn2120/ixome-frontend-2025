@@ -38,7 +38,7 @@
 import { NuxtLink } from '#components';
 import { ref, onMounted } from 'vue';
 
-const logoSrc = ref('/logo.png');
+const logoSrc = ref('~/assets/images/logo.png');
 const onLogoError = () => {
   logoSrc.value = 'https://via.placeholder.com/200x50?text=IXome.ai+Logo';
 };

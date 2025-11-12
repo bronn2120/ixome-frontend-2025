@@ -1,3 +1,5 @@
+import tsconfigPaths from 'vite-tsconfig-paths'
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2024-11-11',
@@ -39,7 +41,7 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [
-      require('vite-tsconfig-paths').default(),
+      tsconfigPaths(),
     ],
   },
   runtimeConfig: {

@@ -39,13 +39,9 @@ components: true,
         '@': resolve(__dirname, '.'),
       },
     },
-    plugins: [
-  '~/plugins/suppress-router-warn.js',tsconfigPaths()],
-'~/plugins/suppress-router-warn.js',
+    plugins: ['~/plugins/suppress-router-warn.js', 
   },
-  plugins: [
-  '~/plugins/suppress-router-warn.js',
-'~/plugins/suppress-router-warn.js',
+  plugins: ['~/plugins/suppress-router-warn.js', 
     { src: '~/plugins/fontawesome.js', ssr: false },
   ],
   build: {

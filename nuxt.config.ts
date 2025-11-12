@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  compatibilityDate: '2024-11-11',
   extends: ['nuxt-seo-kit'],
   modules: [
     '@nuxtjs/tailwindcss',

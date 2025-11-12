@@ -10,6 +10,7 @@ export default defineVitestConfig({
   resolve: {
     alias: {
       '~': resolve(__dirname, '.'),
+      'assets': resolve(__dirname, './assets'),
     },
   },
   test: {

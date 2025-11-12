@@ -45,14 +45,27 @@ export default defineNuxtConfig({
   },
   alias: {
     '~': resolve(__dirname, '.'),
+    'assets': resolve(__dirname, './assets'),
   },
   vite: {
+    resolve: {
+      alias: {
+        '~': resolve(__dirname, '.'),
+        'assets': resolve(__dirname, './assets'),
+      },
+    },
     plugins: [
       tsconfigPaths({ loose: true }),
     ],
   },
   nitro: {
     vite: {
+      resolve: {
+        alias: {
+          '~': resolve(__dirname, '.'),
+          'assets': resolve(__dirname, './assets'),
+        },
+      },
       plugins: [
         tsconfigPaths({ loose: true }),
       ],

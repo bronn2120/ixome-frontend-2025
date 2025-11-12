@@ -84,10 +84,10 @@
         "../node_modules/@intlify/message-compiler"
       ],
       "#content/components": [
-        "./content/components.ts"
+        "./content/components"
       ],
       "#content/manifest": [
-        "./content/manifest.ts"
+        "./content/manifest"
       ],
       "~": [
         "../app"
@@ -141,13 +141,13 @@
         "../node_modules/@nuxtjs/i18n/dist/types"
       ],
       "#mdc-configs": [
-        "./mdc-configs.mjs"
+        "./mdc-configs"
       ],
       "#mdc-highlighter": [
-        "./mdc-highlighter.mjs"
+        "./mdc-highlighter"
       ],
       "#mdc-imports": [
-        "./mdc-imports.mjs"
+        "./mdc-imports"
       ],
       "#og-image": [
         "../node_modules/nuxt-og-image/dist/runtime"
@@ -177,7 +177,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/dev.json"
+        "./manifest/meta/3c82dd1f-2488-487c-86f8-d62637400f91"
       ],
       "#components": [
         "./components"

@@ -45,4 +45,3 @@ export { stringifyMarkdown } from '../node_modules/@nuxtjs/mdc/dist/runtime/stri
 export { defineOgImage } from '../node_modules/nuxt-og-image/dist/runtime/app/composables/defineOgImage';
 export { defineOgImageComponent } from '../node_modules/nuxt-og-image/dist/runtime/app/composables/defineOgImageComponent';
 export { defineOgImageScreenshot } from '../node_modules/nuxt-og-image/dist/runtime/app/composables/defineOgImageScreenshot';
-export { useNuxtDevTools } from '../node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools';

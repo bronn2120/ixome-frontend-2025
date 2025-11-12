@@ -15,8 +15,6 @@ declare module "#build/test-component-wrapper.mjs";
 declare module "#build/i18n-options.mjs";
 declare module "#build/nuxt-site-config/i18n-plugin-deps.mjs";
 declare module "#build/nuxt-og-image/components.mjs";
-declare module "#build/devtools/settings.mjs";
-declare module "#build/runtime.vue-devtools-client.HiOfHYR17A8CYJaeKFqAo4bMZstIEyT5h8yUmaiZoHM.js";
 declare module "#build/routes.mjs";
 declare module "#build/pages.mjs";
 declare module "#build/router.options.mjs";

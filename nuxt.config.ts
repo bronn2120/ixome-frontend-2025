@@ -31,17 +31,16 @@ export default defineNuxtConfig({
   build: {
     postcss: {
       plugins: {
-        tailwindcss: {},
-        autoprefixer: {},
-      },
-    },
-    postcss: {
-      plugins: {
         '@tailwindcss/postcss': {},
         autoprefixer: {},
       },
     },
     transpile: ['@fortawesome/vue-fontawesome'],
+  },
+  vite: {
+    plugins: [
+      require('vite-tsconfig-paths').default(),
+    ],
   },
   runtimeConfig: {
     public: {

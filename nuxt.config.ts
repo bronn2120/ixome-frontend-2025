@@ -43,6 +43,13 @@ export default defineNuxtConfig({
       tsconfigPaths({ loose: true }),
     ],
   },
+  nitro: {
+    vite: {
+      plugins: [
+        tsconfigPaths({ loose: true }),
+      ],
+    },
+  },
   runtimeConfig: {
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://example.com',

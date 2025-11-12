@@ -1,12 +1,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2024-11-11',
-modules: [
+  modules: [
     '@nuxtjs/seo',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/strapi',
     '@nuxt/content',
-    '@nuxtjs/fontawesome',
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
@@ -17,16 +16,14 @@ modules: [
     '@nuxt/image',
     '@nuxtjs/device',
     '@nuxtjs/google-fonts',
-],
-  plugins: ['~/plugins/suppress-router-warn.js'],
-  '~/plugins/fontawesome.js',
+  ],
+  plugins: [
+    '~/plugins/suppress-router-warn.js',
+    '~/plugins/fontawesome.js',
+  ],
   css: ['~/assets/css/tailwind.css'],
   build: {
     transpile: ['@fortawesome/vue-fontawesome'],
-    '@fortawesome/vue-fontawesome',
-  },
-    component: 'FontAwesomeIcon',
-    suffix: true,
   },
   runtimeConfig: {
     public: {
@@ -37,15 +34,15 @@ modules: [
     },
   },
   app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    },
+  },
   site: {
     url: 'https://ixome.ai',
     name: 'Ixome AI',
     description: 'AI-powered smart home support',
     defaultLocale: 'en',
-  },
-    head: {
-      charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
-    },
   },
 });

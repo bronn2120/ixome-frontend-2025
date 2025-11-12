@@ -29,7 +29,6 @@
     "@nuxtjs/web-vitals": "^0.2.7",
     "@stripe/stripe-js": "^7.9.0",
     "@vueuse/core": "^14.0.0",
-    "nuxt-seo": "^1.6.1",
     "pinia": "^3.0.4",
     "stripe": "^19.3.0",
     "zod": "^4.1.12"

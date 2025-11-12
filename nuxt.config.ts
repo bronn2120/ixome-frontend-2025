@@ -1,8 +1,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2024-11-11',
-  extends: ['nuxt-seo'],
 modules: [
+    '@nuxtjs/seo',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/strapi',
     '@nuxt/content',
@@ -40,6 +40,12 @@ modules: [
     },
   },
   app: {
+  site: {
+    url: 'https://ixome.ai',
+    name: 'Ixome AI',
+    description: 'AI-powered smart home support',
+    defaultLocale: 'en',
+  },
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',

@@ -15,7 +15,7 @@
     <Team />
     <Industries />
     <Discover />
-    <ClientOnly><OurRecentStory /></ClientOnly>
+    <ClientOnly><OurRecentStory /></ClientOnly></ClientOnly>
     <Feedback />
     <StartYourFreeTrial />
   </div>

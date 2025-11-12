@@ -19,14 +19,12 @@ modules: [
     '@nuxtjs/google-fonts',
 ],
   plugins: ['~/plugins/suppress-router-warn.js'],
+  '~/plugins/fontawesome.js',
   css: ['~/assets/css/tailwind.css'],
   build: {
     transpile: ['@fortawesome/vue-fontawesome'],
+    '@fortawesome/vue-fontawesome',
   },
-  fontawesome: {
-    icons: {
-      solid: ['faServer', 'faCode', 'faUsers'],
-    },
     component: 'FontAwesomeIcon',
     suffix: true,
   },

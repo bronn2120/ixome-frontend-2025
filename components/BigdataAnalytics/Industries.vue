@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        <div class="analytics-shape2"><img src="~/https://static.vecteezy.comhttps://img.freepik.com/free-vector/geometric-abstract-backgrounds-design-composition-simple-geometric-shapes-background-use-presentation-flyer-leaflet-cards-landing-website-design-illustration_21844953.jpg" alt="image"></div>
+        <div class="analytics-shape2"><img src="~/https://static.vecteezy.com~/assets/images/geometric-background.jpg" alt="image"></div>
     </div>
 </template>
 

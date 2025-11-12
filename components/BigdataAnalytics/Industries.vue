@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        <div class="analytics-shape2"><img src="~/https://static.vecteezy.com~~/assets/images/geometric-background.jpg" alt="image"></div>
+        <div class="analytics-shape2"><img src="~/https://static.vecteezy.com~/assets/images/geometric-background.jpg" alt="image"></div>
     </div>
 </template>
 

@@ -5,7 +5,7 @@
       <div class="row align-items-center">
         <div class="col-lg-6 col-md-12">
           <div class="newsletter-image">
-            <img src="~~/assets/img/bigdata-analytics/newsletter.jpg" alt="Newsletter" loading="lazy">
+            <img src="~/assets/img/bigdata-analytics/newsletter.jpg" alt="Newsletter" loading="lazy">
           </div>
         </div>
 

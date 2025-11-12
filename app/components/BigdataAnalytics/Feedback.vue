@@ -15,7 +15,7 @@
               <p>IXome’s chatbot saved me hours fixing my Control4 system! Highly recommend the Pro Subscription.</p>
             </div>
             <div class="client-info">
-              <img src="~~/assets/img/author1.jpg" alt="John D." loading="lazy">
+              <img src="~/assets/img/author1.jpg" alt="John D." loading="lazy">
               <h3>John D.</h3>
               <span>Homeowner</span>
             </div>
@@ -28,7 +28,7 @@
               <p>The Enterprise plan is perfect for my installation business. Fast, reliable support!</p>
             </div>
             <div class="client-info">
-              <img src="~~/assets/img/author2.jpg" alt="Sarah M." loading="lazy">
+              <img src="~/assets/img/author2.jpg" alt="Sarah M." loading="lazy">
               <h3>Sarah M.</h3>
               <span>Smart Home Installer</span>
             </div>
@@ -41,7 +41,7 @@
               <p>Easy to use and incredibly helpful. The Basic plan covers all my occasional needs.</p>
             </div>
             <div class="client-info">
-              <img src="~~/assets/img/author3.jpg" alt="Mike T." loading="lazy">
+              <img src="~/assets/img/author3.jpg" alt="Mike T." loading="lazy">
               <h3>Mike T.</h3>
               <span>DIY Enthusiast</span>
             </div>

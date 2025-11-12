@@ -12,7 +12,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="single-team-box">
             <div class="image">
-              <img src="~~/assets/img/team-image/1.jpg" alt="CEO Agent" loading="lazy">
+              <img src="~/assets/img/team-image/1.jpg" alt="CEO Agent" loading="lazy">
               <ul class="social">
                 <li><a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
@@ -30,7 +30,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="single-team-box">
             <div class="image">
-              <img src="~~/assets/img/team-image/2.jpg" alt="Chat Agent" loading="lazy">
+              <img src="~/assets/img/team-image/2.jpg" alt="Chat Agent" loading="lazy">
               <ul class="social">
                 <li><a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
@@ -48,7 +48,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="single-team-box">
             <div class="image">
-              <img src="~~/assets/img/team-image/3.jpg" alt="Marketing Agent" loading="lazy">
+              <img src="~/assets/img/team-image/3.jpg" alt="Marketing Agent" loading="lazy">
               <ul class="social">
                 <li><a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
@@ -66,7 +66,7 @@
         <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
           <div class="single-team-box">
             <div class="image">
-              <img src="~~/assets/img/team-image/4.jpg" alt="Social Agent" loading="lazy">
+              <img src="~/assets/img/team-image/4.jpg" alt="Social Agent" loading="lazy">
               <ul class="social">
                 <li><a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>

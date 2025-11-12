@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-lg-4 col-md-6">
           <div class="single-projects-box p-6 rounded-md shadow-lg transition-transform duration-600">
-            <img src="~~/assets/img/projects-image/1.jpg" alt="Residential Smart Home" loading="lazy" class="rounded-t-md w-full">
+            <img src="~/assets/img/projects-image/1.jpg" alt="Residential Smart Home" loading="lazy" class="rounded-t-md w-full">
             <div class="projects-content p-5">
               <h3 class="text-xl font-bold mb-2">Residential Smart Home</h3>
               <p class="text-gray-600">Automated Control4 system for a luxury home, powered by IXome.ai’s chatbot.</p>
@@ -18,7 +18,7 @@
         </div>
         <div class="col-lg-4 col-md-6">
           <div class="single-projects-box p-6 rounded-md shadow-lg transition-transform duration-600">
-            <img src="~~/assets/img/projects-image/2.jpg" alt="Commercial Lighting" loading="lazy" class="rounded-t-md w-full">
+            <img src="~/assets/img/projects-image/2.jpg" alt="Commercial Lighting" loading="lazy" class="rounded-t-md w-full">
             <div class="projects-content p-5">
               <h3 class="text-xl font-bold mb-2">Commercial Lighting</h3>
               <p class="text-gray-600">Lutron integration for an office, streamlined with IXome.ai’s AI support.</p>
@@ -27,7 +27,7 @@
         </div>
         <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3">
           <div class="single-projects-box p-6 rounded-md shadow-lg transition-transform duration-600">
-            <img src="~~/assets/img/projects-image/3.jpg" alt="Hotel Automation" loading="lazy" class="rounded-t-md w-full">
+            <img src="~/assets/img/projects-image/3.jpg" alt="Hotel Automation" loading="lazy" class="rounded-t-md w-full">
             <div class="projects-content p-5">
               <h3 class="text-xl font-bold mb-2">Hotel Automation</h3>
               <p class="text-gray-600">Smart systems for a resort, optimized with IXome.ai’s Enterprise plan.</p>

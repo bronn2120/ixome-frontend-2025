@@ -54,7 +54,7 @@
       </div>
     </div>
     <div class="analytics-shape1">
-      <img src="~~/assets/img/bigdata-analytics/analytics-shape1.png" alt="shape" @error="onImageError">
+      <img src="~/assets/img/bigdata-analytics/analytics-shape1.png" alt="shape" @error="onImageError">
     </div>
   </div>
 </template>
@@ -111,7 +111,7 @@ export default {
 <style scoped>
 .bigdata-analytics-banner {
   padding: 100px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url('~~/assets/img/bigdata-analytics/main-banner.jpg') no-repeat center top;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url('~/assets/img/bigdata-analytics/main-banner.jpg') no-repeat center top;
   background-size: cover;
   min-height: 700px;
   position: relative;

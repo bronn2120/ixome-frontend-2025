@@ -13,7 +13,7 @@
           <div class="single-story-box">
             <div class="story-image">
               <NuxtLink to="/blog-details">
-                <img src="~~/assets/img/blog-image/1.jpg" alt="Control4 Tips" loading="lazy">
+                <img src="~/assets/img/blog-image/1.jpg" alt="Control4 Tips" loading="lazy">
               </NuxtLink>
             </div>
             <div class="story-content">
@@ -31,7 +31,7 @@
           <div class="single-story-box">
             <div class="story-image">
               <NuxtLink to="/blog-details">
-                <img src="~~/assets/img/blog-image/2.jpg" alt="Lutron AI" loading="lazy">
+                <img src="~/assets/img/blog-image/2.jpg" alt="Lutron AI" loading="lazy">
               </NuxtLink>
             </div>
             <div class="story-content">
@@ -49,7 +49,7 @@
           <div class="single-story-box">
             <div class="story-image">
               <NuxtLink to="/blog-details">
-                <img src="~~/assets/img/blog-image/3.jpg" alt="AI Future" loading="lazy">
+                <img src="~/assets/img/blog-image/3.jpg" alt="AI Future" loading="lazy">
               </NuxtLink>
             </div>
             <div class="story-content">

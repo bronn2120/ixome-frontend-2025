@@ -17,6 +17,7 @@
     "@fortawesome/vue-fontawesome": "^3.1.2",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/fontawesome": "^1.1.2",
+    "@nuxtjs/partytown": "^2.0.0",
     "@nuxtjs/prismic": "^4.1.0",
     "@nuxtjs/strapi": "^2.1.1",
     "@nuxtjs/stylelint-module": "^5.2.1",

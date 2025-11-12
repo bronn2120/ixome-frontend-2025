@@ -1,61 +1,74 @@
-import { defineNuxtConfig } from 'nuxt/config';
-import tsconfigPaths from 'vite-tsconfig-paths';
-import { resolve } from 'path';
-
 export default defineNuxtConfig({
-components: true,
   devtools: { enabled: true },
-  modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@nuxt/content', 'nuxt-og-image'],
-  css: [
-    '~/assets/css/main.css',
-    '~/assets/css/tailwind.css',
+  extends: ['nuxt-seo-kit'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/strapi',
+    '@nuxt/content',
+    '@nuxtjs/fontawesome',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/prismic',
+    '@nuxtjs/seo',
+    '@nuxtjs/i18n',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots',
+    '@nuxtjs/web-vitals',
+    '@nuxtjs/turnstile',
+    '@nuxtjs/partytown',
+    '@nuxtjs/critters',
+    '@nuxtjs/image',
+    '@nuxtjs/device',
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/studio',
+    '@nuxtjs/supabase',
+    '@nuxtjs/apollo',
+    '@nuxtjs/algolia',
+    '@nuxtjs/plausible',
+    '@nuxtjs/sanity',
+    '@nuxtjs/storybook',
+    '@nuxtjs/ui',
+    '@nuxtjs/vueuse',
+    '@nuxtjs/security',
+    '@nuxtjs/leaflet',
+    '@nuxtjs/mdc',
+    '@nuxtjs/ionic',
+    '@nuxtjs/pwa',
+    '@nuxtjs/gtm',
+    '@nuxtjs/html-validator',
+    '@nuxtjs/swiper',
+    '@nuxtjs/toast',
+    '@nuxtjs/cookieconsent',
+    '@nuxtjs/fontaine',
+    '@nuxtjs/apollo',
+    '@nuxtjs/seo-kit',
   ],
-  postcss: {
   plugins: ['~/plugins/suppress-router-warn.js'],
+  css: ['~/assets/css/tailwind.css'],
+  build: {
+    transpile: ['@fortawesome/vue-fontawesome'],
   },
-  i18n: {
-    vueI18n: './i18n.config.ts',
-    strategy: 'prefix_except_default',
-    defaultLocale: 'en',
+  fontawesome: {
+    icons: {
+      solid: ['faServer', 'faCode', 'faUsers'],
+    },
+    component: 'FontAwesomeIcon',
+    suffix: true,
   },
   runtimeConfig: {
     public: {
-      stripePublicKey: process.env.STRIPE_PUBLIC_KEY,
-      gaId: process.env.GA_ID,
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://example.com',
+      siteName: 'Ixome AI',
+      siteDescription: 'AI-powered smart home support',
+      language: 'en-US',
     },
-  },
-  content: {
-    documentDriven: true,
-    sources: { content: { driver: 'fs', prefix: '/blog', base: 'content' } },
-  },
-  ogImage: {
-    defaults: { width: 1200, height: 630 },
-  },
-  compatibilityDate: '2025-11-08',
-  vite: {
-    resolve: {
-      alias: {
-        '~': resolve(__dirname, '.'),
-        '@': resolve(__dirname, '.'),
-      },
-    },
-  plugins: ['~/plugins/suppress-router-warn.js'],
-  },
-  plugins: ['~/plugins/suppress-router-warn.js'],
-    { src: '~/plugins/fontawesome.js', ssr: false },
-  ],
-  build: {
-    transpile: ['gsap', '@fortawesome/vue-fontawesome', 'bootstrap'],
   },
   app: {
     head: {
-      link: [
-        { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css' },
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' },
-      ],
-      script: [
-        { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js', body: true, defer: true },
-      ],
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
     },
   },
 });

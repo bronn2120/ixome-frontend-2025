@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    '@nuxtjs/web-vitals',
     '@nuxtjs/turnstile',
     '@nuxtjs/partytown',
     '@nuxtjs/critters',
@@ -34,7 +33,7 @@ export default defineNuxtConfig({
   build: {
     postcss: {
       plugins: {
-        tailwindcss: {},
+        '@tailwindcss/postcss': {},
         autoprefixer: {},
       },
     },

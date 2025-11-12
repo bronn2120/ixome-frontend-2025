@@ -1,7 +1,10 @@
-defineNuxtPlugin(() => {
-  const oldWarn = console.warn;
-  console.warn = (...args) => {
-    if (args[0].includes("[Vue Router warn]") && args[1].includes("/~/assets")) return;
-    oldWarn(...args);
-  };
-});
+import { defineNuxtPlugin } from '#app'
+export default defineNuxtPlugin(() => {
+  const originalWarn = console.warn
+  console.warn = (message, ...args) => {
+    if (typeof message === 'string' && message.includes('asset(s)')) {
+      return
+    }
+    originalWarn(message, ...args)
+  }
+})

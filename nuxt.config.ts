@@ -40,7 +40,7 @@ export default defineNuxtConfig({
   },
   vite: {
     plugins: [
-      tsconfigPaths(),
+      tsconfigPaths({ loose: true }),
     ],
   },
   runtimeConfig: {

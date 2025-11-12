@@ -1,4 +1,9 @@
 import tsconfigPaths from 'vite-tsconfig-paths'
+import { resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   compatibilityDate: '2024-11-11',
@@ -37,6 +42,9 @@ export default defineNuxtConfig({
       },
     },
     transpile: ['@fortawesome/vue-fontawesome'],
+  },
+  alias: {
+    '~': resolve(__dirname, '.'),
   },
   vite: {
     plugins: [

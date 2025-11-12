@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-11',
   modules: [
     '@nuxtjs/seo',
-    '@nuxtjs/tailwindcss',
     '@nuxtjs/strapi',
     '@nuxt/content',
     '@nuxtjs/i18n',

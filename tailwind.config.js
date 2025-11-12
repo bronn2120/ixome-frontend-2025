@@ -1,1 +1,14 @@
-module.exports = { content: ["./app.vue", "./app/**/*.{vue,js,ts}", "./components/**/*.{vue,js,ts}", "./layouts/**/*.vue", "./pages/**/*.vue", "./plugins/**/*.{js,ts}"], theme: { extend: {} }, plugins: [] }
+module.exports = {
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+    "./error.vue",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}

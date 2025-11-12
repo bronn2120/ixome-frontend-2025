@@ -26,11 +26,16 @@ export default defineNuxtConfig({
     locales: ['en'],
   },
   plugins: [
-    '~/plugins/suppress-router-warn.js',
     '~/plugins/fontawesome.js',
   ],
   css: ['~/assets/css/tailwind.css'],
   build: {
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
     postcss: {
       plugins: {
         '@tailwindcss/postcss': {},

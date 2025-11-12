@@ -1,5 +1,5 @@
-/// <reference types="@pinia/nuxt" />
 /// <reference types="@nuxtjs/i18n" />
+/// <reference types="@pinia/nuxt" />
 /// <reference types="@nuxt/content" />
 /// <reference types="nuxt-og-image" />
 /// <reference types="@nuxt/devtools" />

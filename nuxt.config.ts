@@ -7,7 +7,6 @@ modules: [
     '@nuxtjs/strapi',
     '@nuxt/content',
     '@nuxtjs/fontawesome',
-    'nuxt-seo',
     '@nuxtjs/i18n',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',

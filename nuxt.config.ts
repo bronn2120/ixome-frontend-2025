@@ -3,6 +3,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import { resolve } from 'path';
 
 export default defineNuxtConfig({
+components: true,
   devtools: { enabled: true },
   modules: ['@pinia/nuxt', '@nuxtjs/i18n', '@nuxt/content', 'nuxt-og-image'],
   css: [

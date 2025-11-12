@@ -15,13 +15,14 @@
     <Team />
     <Industries />
     <Discover />
-    <OurRecentStory />
+    <ClientOnly><OurRecentStory />
     <Feedback />
     <StartYourFreeTrial />
   </div>
 </template>
 
 <script setup>
+import ClientOnly from '#app/components/ClientOnly'
 import BigdataAnalyticsMainBanner from '~/components/BigdataAnalytics/MainBanner.vue';
 import WhatWeDo from '~/components/BigdataAnalytics/WhatWeDo.vue';
 import Services from '~/components/BigdataAnalytics/Services.vue';

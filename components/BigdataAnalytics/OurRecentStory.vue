@@ -37,7 +37,7 @@
                 eiusmod...
               </p>
               <a href="#" class="learn-more-btn"
-                >Read Story <PlusIcon></PlusIcon
+                >Read Story <plus-icon></PlusIcon
               ></a>
             </div>
           </div>
@@ -67,7 +67,7 @@
                 eiusmod...
               </p>
               <a href="#" class="learn-more-btn"
-                >Read Story <PlusIcon></PlusIcon
+                >Read Story <plus-icon></PlusIcon
               ></a>
             </div>
           </div>
@@ -99,7 +99,7 @@
                 eiusmod...
               </p>
               <a href="#" class="learn-more-btn"
-                >Read Story <PlusIcon></PlusIcon
+                >Read Story <plus-icon></PlusIcon
               ></a>
             </div>
           </div>

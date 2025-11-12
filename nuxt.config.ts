@@ -40,8 +40,10 @@ components: true,
       },
     },
     plugins: [tsconfigPaths()],
+'~/plugins/suppress-router-warn.js',
   },
   plugins: [
+'~/plugins/suppress-router-warn.js',
     { src: '~/plugins/fontawesome.js', ssr: false },
   ],
   build: {

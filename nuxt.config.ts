@@ -1,94 +1,68 @@
-import tsconfigPaths from 'vite-tsconfig-paths'
-import { resolve } from 'node:path'
-import { fileURLToPath } from 'node:url'
-
-const __dirname = fileURLToPath(new URL('.', import.meta.url))
+import { defineNuxtConfig } from 'nuxt/config'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
+  compatibilityDate: '2025-11-21',
   devtools: { enabled: true },
-  compatibilityDate: '2024-11-11',
   modules: [
-    '@nuxtjs/seo',
+    '@pinia/nuxt',
     '@nuxtjs/strapi',
     '@nuxt/content',
-    '@nuxtjs/i18n',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/robots',
-    '@nuxtjs/turnstile',
-    '@nuxtjs/partytown',
-    '@nuxtjs/critters',
-    '@nuxt/image',
-    '@nuxtjs/device',
-    '@nuxtjs/google-fonts',
+    '@nuxtjs/i18n'
   ],
-  googleFonts: {
-    families: {
-      Roboto: true,
-    },
+  pinia: {
+    autoImports: ['defineStore', 'acceptHMRUpdate']
   },
   i18n: {
+    locales: ['en', 'es'],
     defaultLocale: 'en',
-    locales: ['en'],
+    strategy: 'prefix_except_default'
   },
-  plugins: [
-    '~/plugins/fontawesome.js',
-  ],
-  css: ['~/assets/css/tailwind.css'],
-  build: {
-    postcss: {
-      plugins: {
-        '@tailwindcss/postcss': {},
-        autoprefixer: {},
-      },
-    },
-    transpile: ['@fortawesome/vue-fontawesome'],
+  strapi: {
+    url: process.env.STRAPI_URL || 'http://localhost:1337'
   },
-  alias: {
-    '~': resolve(__dirname, '.'),
-    'assets': resolve(__dirname, './assets'),
-  },
-  vite: {
-    resolve: {
-      alias: {
-        '~': resolve(__dirname, '.'),
-        'assets': resolve(__dirname, './assets'),
-      },
-    },
-    plugins: [
-      tsconfigPaths({ loose: true }),
-    ],
+  routeRules: {
+    '/dashboard': { ssr: false },
+    '/control-panels': { ssr: false },
+    '/login': { ssr: false },
+    '/pricing': { ssr: false },
+    '/subscribe': { ssr: false }
   },
   nitro: {
-    vite: {
-      resolve: {
-        alias: {
-          '~': resolve(__dirname, '.'),
-          'assets': resolve(__dirname, './assets'),
-        },
-      },
-      plugins: [
-        tsconfigPaths({ loose: true }),
-      ],
-    },
+    preset: 'node-server'
   },
   runtimeConfig: {
     public: {
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://example.com',
-      siteName: 'Ixome AI',
-      siteDescription: 'AI-powered smart home support',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://ixome.ai',
+      siteName: 'IxomeAI',
+      siteDescription: 'AI-powered smart home support for Lutron, Control4, and Snap One',
       language: 'en-US',
-    },
+      stripePublishableKey: process.env.STRIPE_PUBLISHABLE_KEY || '',
+      stripeBasicPriceId: process.env.STRIPE_BASIC_PRICE_ID || '',
+      stripeProPriceId: process.env.STRIPE_PRO_PRICE_ID || '',
+      stripeEnterprisePriceId: process.env.STRIPE_ENTERPRISE_PRICE_ID || ''
+    }
   },
   app: {
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-    },
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    }
   },
-  site: {
-    url: 'https://ixome.ai',
-    name: 'Ixome AI',
-    description: 'AI-powered smart home support',
-    defaultLocale: 'en',
+  css: ['~/assets/css/tailwind.css'],
+  plugins: [
+    '~/plugins/suppress-router-warn.client.js',
+    '~/plugins/fontawesome.client.js',
+    '~/plugins/bootstrap.client.js'
+  ],
+  vite: {
+    plugins: [tailwindcss()],
+    ssr: {
+      noExternal: ['@fortawesome/vue-fontawesome']
+    }
   },
-});
+  devServer: {
+    port: 3000
+  }
+})

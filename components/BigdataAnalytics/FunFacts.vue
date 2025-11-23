@@ -1,53 +1,76 @@
 <template>
-    <div class="funfacts-area bg-image ptb-80">
-        <div class="container">
-            <div class="section-title">
-                <h2>We always try to understand users expectation</h2>
-                <div class="bar"></div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-6 col-sm-6">
-                    <div class="single-funfact">
-                        <h3>180<span>k</span></h3>
-                        <p>Downloaded</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-3 col-6 col-sm-6">
-                    <div class="single-funfact">
-                        <h3>20<span>k</span></h3>
-                        <p>Feedback</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-3 col-6 col-sm-6">
-                    <div class="single-funfact">
-                        <h3>500<span>+</span></h3>
-                        <p>Workers</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-3 col-6 col-sm-6">
-                    <div class="single-funfact">
-                        <h3>70<span>+</span></h3>
-                        <p>Contributors</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact-cta-box">
-                <h3>Have any question about us?</h3>
-                <p>Don't hesitate to contact us</p>
-                <a href="#" class="btn btn-primary">Contact Us</a>
-            </div>
+  <div class="bigdata-funfacts-area ptb-80">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="single-funfacts-box">
+            <h3>312</h3>
+            <p>Lutron Solutions Supported</p>
+          </div>
         </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="single-funfacts-box">
+            <h3>500+</h3>
+            <p>Control4 Issues Resolved</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="single-funfacts-box">
+            <h3>10K+</h3>
+            <p>Tokens Used Monthly</p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="single-funfacts-box">
+            <h3>99%</h3>
+            <p>Customer Satisfaction</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'FunFacts'
+  name: 'FunFacts'
 }
 </script>
+
+<style scoped>
+.bigdata-funfacts-area {
+  position: relative;
+  z-index: 1;
+}
+
+.single-funfacts-box {
+  text-align: center;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.single-funfacts-box h3 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #684df4;
+  margin-bottom: 10px;
+}
+
+.single-funfacts-box p {
+  margin-bottom: 0;
+  color: #5c5c5c;
+}
+
+.single-funfacts-box:hover {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+</style>

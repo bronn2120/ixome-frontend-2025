@@ -7,15 +7,24 @@ export const useAuthStore = defineStore('auth', {
   }),
   actions: {
     async login(credentials) {
-      // Strapi auth API call example
       const response = await ('/api/auth/local', {
         method: 'POST',
         body: credentials,
       });
       this.user = response.user;
       this.jwt = response.jwt;
-      // Redirect or store
       useRouter().push('/dashboard');
+    },
+    async fetchUser() {
+      if (!this.jwt) return;
+      try {
+        this.user = await ('/api/users/me', {
+          headers: { Authorization: `Bearer ${this.jwt}` },
+        });
+      } catch (e) {
+        console.error(e);
+        this.logout();
+      }
     },
     logout() {
       this.user = null;
@@ -23,5 +32,5 @@ export const useAuthStore = defineStore('auth', {
       useRouter().push('/login');
     },
   },
-  persist: true,
+  persist: true, // Optional for localStorage
 });

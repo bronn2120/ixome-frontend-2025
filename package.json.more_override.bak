@@ -13,8 +13,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
-    "@fortawesome/free-brands-svg-icons": "^7.1.0",
-    "@fortawesome/free-regular-svg-icons": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@fortawesome/vue-fontawesome": "^3.1.2",
     "@nuxtjs/axios": "^5.13.6",
@@ -26,6 +24,7 @@
     "@nuxtjs/prismic": "^4.1.0",
     "@nuxtjs/strapi": "^2.1.1",
     "@nuxtjs/stylelint-module": "^5.2.1",
+    "@nuxtjs/tailwindcss": "^6.14.0",
     "@nuxtjs/turnstile": "^1.1.1",
     "@nuxtjs/web-vitals": "^0.2.7",
     "@popperjs/core": "^2.11.8",
@@ -39,18 +38,19 @@
     "zod": "^4.1.12"
   },
   "devDependencies": {
-    "@nuxt/content": "^3.8.2",
+    "@nuxt/content": "^3.8.0",
     "@nuxt/image": "^1.11.0",
     "@nuxt/test-utils": "^3.20.1",
     "@nuxt/ui": "^4.1.0",
-    "@nuxtjs/i18n": "^10.2.1",
+    "@nuxtjs/i18n": "^10.2.0",
     "@nuxtjs/seo": "^3.2.2",
     "@pinia/nuxt": "^0.11.3",
-    "@tailwindcss/vite": "^4.1.17",
+    "@tailwindcss/postcss": "^4.1.17",
     "@vite-pwa/nuxt": "^1.0.4",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/test-utils": "^2.4.6",
     "@vueuse/nuxt": "^14.0.0",
+    "autoprefixer": "^10.4.22",
     "better-sqlite3": "^12.4.1",
     "happy-dom": "^20.0.10",
     "jsdom": "^27.1.0",
@@ -59,6 +59,7 @@
     "nuxt-og-image": "^5.1.12",
     "nuxt-security": "^2.3.0",
     "patch-package": "^8.0.1",
+    "postcss": "^8.5.6",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3",
     "vite-tsconfig-paths": "^4.3.2",
@@ -69,7 +70,6 @@
     "cookie": "^0.7.0",
     "http-proxy-middleware": "^2.0.7",
     "tmp": "^0.2.3",
-    "sourcemap-codec": "@jridgewell/sourcemap-codec@^1.5.0",
-    "ip": "^2.0.1"
+    "sourcemap-codec": "@jridgewell/sourcemap-codec@^1.5.0"
   }
 }

@@ -1,3 +1,4 @@
+```vue
 <template>
   <div class="bigdata-team-area ptb-80 bg-f7fafd">
     <div class="container">
@@ -11,15 +12,14 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="single-team-box">
             <div class="image">
-              <img src="https://i.ytimg.com/vi/39RKVsFQZe8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBfKYdUAqp5xvgZUHBVxnonCg04oA" alt="image">
+              <img src="~/assets/img/team-image/1.jpg" alt="CEO Agent" loading="lazy">
               <ul class="social">
-                <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
               </ul>
             </div>
-
             <div class="content">
               <h3>CEO Agent</h3>
               <span>Orchestrates operations for seamless smart home automation.</span>
@@ -30,15 +30,14 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="single-team-box">
             <div class="image">
-              <img src="https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2024/08/AICopilotVsChatbot_02.webp" alt="image">
+              <img src="~/assets/img/team-image/2.jpg" alt="Chat Agent" loading="lazy">
               <ul class="social">
-                <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
               </ul>
             </div>
-
             <div class="content">
               <h3>Chat Agent</h3>
               <span>Provides instant Control4 and Lutron troubleshooting support.</span>
@@ -49,15 +48,14 @@
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="single-team-box">
             <div class="image">
-              <img src="https://marketoonist.com/wp-content/uploads/2025/05/250519.aiagents.jpg" alt="image">
+              <img src="~/assets/img/team-image/3.jpg" alt="Marketing Agent" loading="lazy">
               <ul class="social">
-                <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
               </ul>
             </div>
-
             <div class="content">
               <h3>Marketing Agent</h3>
               <span>Crafts personalized promotions to enhance your subscription value.</span>
@@ -68,15 +66,14 @@
         <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
           <div class="single-team-box">
             <div class="image">
-              <img src="https://cdn.prod.website-files.com/637e7afd450ee24fb878e5b0/68637bfe5c8483eb1213ab45_f702c88e-1268-420b-804c-f2c5acfab557.png" alt="image">
+              <img src="~/assets/img/team-image/4.jpg" alt="Social Agent" loading="lazy">
               <ul class="social">
-                <li><a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
               </ul>
             </div>
-
             <div class="content">
               <h3>Social Agent</h3>
               <span>Engages the community with updates on smart home innovations.</span>
@@ -88,10 +85,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Team'
-}
+<script setup>
+import { ref } from 'vue';
 </script>
 
 <style scoped>
@@ -142,7 +137,6 @@ export default {
   border-radius: 5px;
   margin-bottom: 30px;
   box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-  -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
@@ -154,7 +148,6 @@ export default {
 
 .single-team-box .image img {
   border-radius: 5px 5px 0 0;
-  -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
@@ -167,7 +160,6 @@ export default {
   list-style-type: none;
   margin: 0;
   text-align: center;
-  -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
@@ -184,7 +176,6 @@ export default {
   height: 35px;
   line-height: 35px;
   border-radius: 50px;
-  -webkit-transition: 0.6s;
   transition: 0.6s;
 }
 
@@ -209,7 +200,6 @@ export default {
 }
 
 .single-team-box:hover .image img {
-  -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
